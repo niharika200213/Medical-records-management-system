@@ -1,0 +1,47 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2.5%;
+    justify-content: space-between;
+}
+.flex>div{
+    width: 50%;
+    padding: 20px;
+}
+
+.flex>div:first-child{
+    width: 35%;
+    padding: 20px;
+}
+
+.docBtn{
+    background-color: #FF928B;
+    border: 1px #FF928B solid;
+    font-size: 24px;
+    padding: 4px 12px;
+    color: white;
+    border-radius: 10px;
+    margin-right: 10%;
+    width: 10.5rem;
+}
+
+.inActive{
+    background-color: white;
+    border: 1px #FF928B solid;
+    color: #FF928B;
+}
+
+.profile{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.profile button{
+    /* position: relative; */
+    font-size: 20px;
+    width: 50%;
+}

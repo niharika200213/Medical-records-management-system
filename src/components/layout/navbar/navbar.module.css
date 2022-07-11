@@ -1,0 +1,45 @@
+.navMain{
+    height: 50px;
+    background-color: #424874;
+    color: white;
+
+}
+
+.navMain h1{
+    display: inline;
+    padding: 5px 20px 5px 20px;
+
+}
+
+.navBott{
+    height: 70px;
+    background-color: #323658;
+}
+
+ul{
+    list-style: none;
+    display: inline;
+    position: relative;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+ul>li{
+    display: inline;
+    margin-left: 20px;
+}
+
+ul>li a{
+    color: white;
+    text-decoration: none;
+}
+
+ul>li a:hover{
+    color: white;
+}
+
+ul>li img {
+    margin-top: -5px;
+}
