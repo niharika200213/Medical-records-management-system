@@ -94,20 +94,6 @@ code {
   top: 0;
 }
 
-.fixClosed{
-  /* margin-top: -24px; */
-}
-/* @keyframes fadeIn {
-  99% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-} */
-
 .caroImg{
   height: 85vh;
 }

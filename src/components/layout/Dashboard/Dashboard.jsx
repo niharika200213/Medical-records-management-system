@@ -53,13 +53,13 @@ const Dashboard = () => {
         </Carousel.Item>
       </Carousel>
       <div className={styles.navBott}>
-        <h1 style={{ color: "white", paddingTop: "10px", paddingLeft: "50px" }}>ABOUT</h1>
+        <h1 style={{ color: "white", paddingTop: "10px", paddingLeft: "50px", backgroundColor:"#424874" }}>ABOUT</h1>
       </div>
-      <div style={{ width: "90%", marginLeft: "5%", fontSize: "22px" }}>
+      <div style={{ padding: "5%", fontSize: "22px", backgroundColor: "#323658" }}>
         <h1 style={{ color: "#FF928B", }}>
           Blockchain based Medical Records Management System
         </h1>
-        <ol style={{ backgroundColor: "#424874", color: "white" }}>
+        <ol style={{ color: "white" }}>
           <li>Securely share your medical reports with doctors
             Your data is protected by immutable smart contract</li>
           <br />
@@ -71,7 +71,7 @@ const Dashboard = () => {
         <h1 style={{ color: "#FF928B", }}>
           Future Scope
         </h1>
-        <ol style={{ backgroundColor: "#424874", color: "white" }}>
+        <ol style={{ color: "white" }}>
           <li>Patients can book appointements with doctors and chat with them directly through the app. </li>
           <li>Users can carry out transactions for fees payment throught the application. </li>
         </ol>
