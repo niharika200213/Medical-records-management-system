@@ -10,9 +10,7 @@ const AddReport = () => {
     const [medi,setMedi] = useState("")
     const [remarks,setRemarks] = useState("")
     const report = async ()=>{
-        console.log(location.state.addr);
         let x = await addReport(location.state.addr,dis,medi,remarks)
-        console.log(x);
         x?navigate("/show-patients"):console.log(false)
 
     }

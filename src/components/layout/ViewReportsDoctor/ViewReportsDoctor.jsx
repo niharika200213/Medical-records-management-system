@@ -11,22 +11,9 @@ const ViewReportsDoctor = (props) => {
     showRep();
   }, [])
   const showRep = async () => {
-    const reports = await viewReports(location.pathname.split("/")[2]);
-    console.log(reports);
-    setState(reports)
-  }
-  const open = () => {
-    console.log("clicked")
-    let ele = document.querySelector(".accord")
-    if (ele.style.opacity === "1") {
-      ele.style.visibility = "collapse"
-      ele.style.opacity = "0"
-      ele.style.height = "0px"
-    } else {
-      ele.style.height = "100%"
-      ele.style.visibility = "visible"
-      ele.style.opacity = "1"
-    }
+    const reports = await viewReports(location.pathname.split(":")[1]);
+    setState(reports);
+    console.log(reports)
   }
   if (state.length === 0)
     return (<><h1>No reports found</h1></>)

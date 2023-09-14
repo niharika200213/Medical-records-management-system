@@ -6,11 +6,11 @@ export const searchDoc = async (name) => {
         let doc;
         const docData = await Promise.all(doctorsAddr.map(async (addr) => {
             doc = await getDocByAddr(addr);
-            console.log(doc)
             return {...doc, addr:addr};
         }));
         const res = docData.filter((addr) => {
-            if (addr[0].toLowerCase() === name.toLowerCase())
+            console.log(addr)
+            if (addr[0].toLowerCase() === name.toLowerCase() || addr.addr === name)
                 return addr;
             else return false
         })
@@ -30,7 +30,7 @@ export const searchPat = async (name) => {
             return {...pat, addr:addr};
         }))
         result = patData.filter((addr) => {
-            if (addr[0].toLowerCase() === name.toLowerCase())
+            if (addr[0].toLowerCase() === name.toLowerCase() || addr.addr === name)
                 return addr;
             else return false
         })
