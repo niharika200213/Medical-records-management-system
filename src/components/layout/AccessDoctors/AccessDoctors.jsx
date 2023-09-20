@@ -20,7 +20,7 @@ const AccessDoctors = (props) => {
 
 
     return (
-        <div style={{ display: 'flex', flexWrap: "wrap", justifyContent: "space-between" }}>
+        <div style={{ display: 'flex', flexWrap: "wrap" }}>
             {
                 docs.map((doc, key) => {
                     return <CardDoc state={doc} key={key} isDoc={props.isDoc}/>
