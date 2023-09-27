@@ -5,7 +5,7 @@ import user from "../../../assets/user.png"
 const CardDoc = (props) => {
     const navigate = useNavigate()
     const access = ()=>{
-        navigate("/view-record/"+props.state.addr,{state:props.state})
+        navigate("/view-record/:"+props.state.addr,{state:props.state})
     }
   return (
     <>
