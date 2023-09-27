@@ -34,7 +34,7 @@ const CollapseCard = (props) => {
           <h2>{props.data[0]}</h2>
           <span className='age'> Age: {props.data[1]}yrs Blood Group: {props.data[3]}</span>
           <span className='downArr'><i className="fa-solid fa-angle-down"></i></span>
-          <span style={{ float: "right", marginTop: "12px" }}><button onClick={()=>{navigate("/view-record/"+props.data.addr)}}>View Reports</button> {props.isDoc?<button onClick={()=>{navigate("/add-report",{state:props.data})}}>Add Report</button>:<></>}</span>
+          <span style={{ float: "right", marginTop: "12px" }}><button onClick={()=>{navigate("/view-record/:"+props.data.addr)}}>View Reports</button> {props.isDoc?<button onClick={()=>{navigate("/add-report",{state:props.data})}}>Add Report</button>:<></>}</span>
         </div>
         <div className='accord'>
           <div>
