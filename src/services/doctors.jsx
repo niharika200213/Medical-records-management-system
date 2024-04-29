@@ -128,7 +128,6 @@ export const getAccessedDoctors = async() => {
     try{
         const accessedDoctors = await Medical.methods.getAccessedDoctors()
         .call({ from: accounts[0] });
-        console.log("accessesDocs:"+accessedDoctors)
         return accessedDoctors;
     }
     catch (err) {

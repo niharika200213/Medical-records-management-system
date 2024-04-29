@@ -10,15 +10,13 @@ const Navbar = (props) => {
     e.preventDefault();
     const res = await searchDoc(search)
     setSearch("");
-    navigate("/search/doctor/"+search,{state:res});
-    console.log(res)    
+    navigate("/search/doctor/"+search,{state:res});   
 }
 const patSearch = async(e) => {
     e.preventDefault();
     const res = await searchPat(search)
     setSearch("");
     navigate("/search/patient/"+search,{state:res});
-    console.log(res)
 }
   let navigate = useNavigate()
 

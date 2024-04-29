@@ -58,11 +58,9 @@ const EditProfile = (props) => {
     else if (props.isPat !== false) {
         const updatepatData = (name, value) => {
             setPatData(previousState => {
-                console.log(previousState)
                 return { ...previousState, [name]: value }
             });
             validate(patData)
-            console.log(patData)
         }
         const updateErrors = (name, value) => {
             setPatErrors(previousState => {
@@ -159,7 +157,6 @@ const EditProfile = (props) => {
             setDocData(previousState => {
                 return { ...previousState, [name]: value }
             });
-            console.log(docData)
             validate(docData)
         }
 

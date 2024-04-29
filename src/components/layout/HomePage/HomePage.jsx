@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { viewReports } from '../../../services/doctors';
-import { showPatients } from '../../../services/showPatients';
 
 const HomePage = (props) => {
   let navigate = useNavigate()

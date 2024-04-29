@@ -9,7 +9,6 @@ export const searchDoc = async (name) => {
             return {...doc, addr:addr};
         }));
         const res = docData.filter((addr) => {
-            console.log(addr)
             if (addr[0].toLowerCase() === name.toLowerCase() || addr.addr === name)
                 return addr;
             else return false

@@ -14,7 +14,6 @@ const AccessDoctors = (props) => {
         else
             x = await showDoctors()
 
-        console.log(x)
         setDocs(x)
     }
 

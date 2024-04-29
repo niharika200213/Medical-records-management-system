@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import user from "../../../assets/user.png"
 
 const open = (i) => {
-    console.log("clicked")
-    console.log(document.getElementsByClassName("accord")[i])
     let ele = document.querySelectorAll(".accord")[i]
     let ele2 = document.querySelectorAll(".accordHead")[i]
     if (ele.style.visibility === "visible") {
@@ -25,16 +23,15 @@ const open = (i) => {
   }
 const CollapseCard = (props) => {
     const navigate = useNavigate()
-
-  return (
-      
+  return (      
     <>
         <div className="accordHead" onClick={() => { open(props.i) }}>
           <img src={user} alt="user"></img>
           <h2>{props.data[0]}</h2>
           <span className='age'> Age: {props.data[1]}yrs Blood Group: {props.data[3]}</span>
           <span className='downArr'><i className="fa-solid fa-angle-down"></i></span>
-          <span style={{ float: "right", marginTop: "12px" }}><button onClick={()=>{navigate("/view-record/"+props.data.addr)}}>View Reports</button> {props.isDoc?<button onClick={()=>{navigate("/add-report",{state:props.data})}}>Add Report</button>:<></>}</span>
+          <span style={{ float: "right", marginTop: "12px" }}><button onClick={()=>{navigate("/view-record/:"+props.data.addr)}}>View Reports</button> 
+          {props.isDoc?<button style={{marginLeft:"2px"}} onClick={()=>{navigate("/add-report",{state:props.data})}}>Add Report</button>:<></>}</span>
         </div>
         <div className='accord'>
           <div>
@@ -43,7 +40,8 @@ const CollapseCard = (props) => {
             <h1>Remarks</h1>
             <p>{props.data[5]}</p>
           </div>
-          {props.isDoc?<></>:<button style={{color:"#424874"}} onClick={()=>navigate("/editProfile")}>Edit Profile</button>}
+          {props.isDoc?<></>:<button style={{ backgroundColor: "#FF928B", borderRadius: "10px", border: "1px #FF928B solid", color: "white",
+           padding: "4px 10px", fontWeight: "bolder" }} onClick={()=>navigate("/editProfile")}>Edit Profile</button>}
         </div>
     </>
   )
